@@ -1,60 +1,70 @@
 * {
-  margin: 0;
-  padding: 0;
+  /* border: 2px solid green; */
   box-sizing: border-box;
 }
 body {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(rgb(248, 166, 98), rgb(58, 74, 168));
+  width: 100vw;
+  background: linear-gradient(rgb(25, 67, 107), rgb(33, 33, 141));
   color: white;
 }
 .location {
-  height: 30vh;
-  width: 50%;
+  height: 10%;
+  margin: 1% 0;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.condition-container {
+  justify-content: flex-start;
+  align-items: left;
   flex-direction: column;
-  height: 30vh;
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  text-shadow: 2px 2px #001a3b;
 }
+.location p{
+margin: -1% 0;
+  font-size: 20px;
+}
+
 .degreesSection {
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin: 0;
+  width: 20%;
+}
+
+.icons{
+  width: 40%;
+  display: flex;
+  margin: 5% 1%;
 }
 
 .degreesSection span {
-  margin: 10px;
-  font-size: 30px;
+  margin: 0 0 60px;
+  font-size: 18px;
 }
 .degreesSection p {
-  font-size: 40px;
+  font-size: 80px;
 }
 
 .conditionSection {
-  margin-top: 40px;
-  flex-direction: column;
+  width: 50%;
+}
+.conditionSection {
+
+  flex-direction: row;
   display: flex;
   align-items: center;
   cursor: pointer;
+
 }
 
 .conditionSection span {
   margin: 5px;
   /* font-size: 30px; */
+  
 }
 .conditionSection p {
   font-size: 20px;
+  
 }
 
-/* if syntax is not correct it will need the . in the js on lines 4-5+ */
+

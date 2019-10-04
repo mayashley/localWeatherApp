@@ -10,41 +10,47 @@
   <body>
     <div class="location" id="location">
       <h1 class="timeZone" id="timeZone">The Timezone</h1>
-
-      <canvas class="icons" width="128" height="128"></canvas>
-
+      <p class="tempDescription" id="tempDescription">
+          Current overhead condition
+      </p>
     </div>
-    <div class="condition-container temperatureC" id="temperatureC">
-      <div class="degreesSection" id="degreesSection">
-        <p class="tempDegree" id="tempDegree">80</p>
-        <span>°F</span>
+    
+
+    <!-- <div class="temp-container">
+      <canvas class="icons" width="128" height="128"></canvas> -->
+
+      <div class="temperatureC " id="temperatureC">
+        <div class="degreesSection" id="degreesSection">
+            <canvas class="icons" width="128" height="128"></canvas>
+          <p class="tempDegree" id="tempDegree">Temp</p>
+          <span>°F</span>
+        </div>
+      </div> 
+    </div>
+    
+    <!-- </div> -->
+    <!-- new add ons -->
+
+    <div class="condition-container" id="condition-container">
+      <div class="conditionSection">
+        <p class="wind" id="wind">wind speed goes here</p>
+        <span>mph</span>
       </div>
 
-      <!-- new add ons -->
+      <div class="condition-container" id="condition-container">
+        <div class="conditionSection">
+          <p class="humid" id="humid">humidity goes here</p>
+          <span>%</span>
+        </div>
      
 
-        <div class="condition-container" id="condition-container">
-          <div class="conditionSection">
-            <p class="wind" id="wind">wind speed goes here</p>
-            <span>Wind Speed</span>
-          </div>
-
-          <div class="condition-container" id="condition-container">
-              <div class="conditionSection">
-                <p class="humid" id="humid">humidity goes here</p>
-                <span>Humidity</span>
-              </div>
-
-          <!-- end of new add ons -->
-
-          <div class="tempDescription conditionSection" id="tempDescription">
-            The temp goes here
-          </div>
-          <!-- consider makeing a "overhead conditions span for this one" -->
-        </div>
+        <!-- end of new add ons -->
       </div>
-    
-      <script src="skycons.js"></script>
+    </div>
+ 
+  
+
+    <script src="skycons.js"></script>
     <script src="code.js"></script>
   </body>
 </html>
