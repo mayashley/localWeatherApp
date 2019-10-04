@@ -19,7 +19,7 @@ body {
   text-shadow: 2px 2px #001a3b;
 }
 .location p{
-margin: -1% 0;
+margin: -1% 1%;
   font-size: 20px;
 }
 
@@ -28,43 +28,60 @@ margin: -1% 0;
   align-items: center;
   cursor: pointer;
   margin: 0;
-  width: 20%;
+  width: 100%;
 }
-
-.icons{
-  width: 40%;
-  display: flex;
-  margin: 5% 1%;
+.icons {
+  width: 80%;
+ margin: 10px 0 60px 30px;
 }
 
 .degreesSection span {
-  margin: 0 0 60px;
+  margin: 20% 0 60px;
   font-size: 18px;
 }
 .degreesSection p {
-  font-size: 80px;
+  font-size: 40px;
 }
 
-.conditionSection {
-  width: 50%;
-}
-.conditionSection {
 
+.row-container {
+  margin: 5% 0;
+  width: 100%;
+  display:flex;
+justify-content: space-between;
+}
+
+.allCondition {
+  background-color: rgba(0, 10, 41, 0.425);
+  border: groove 2px #f7f7f748;
+  border-radius: 4px;
+  width: 30%;
+  height: 300px;
+  margin: -4% 10%;
+}
+
+
+
+.conditionSection {
   flex-direction: row;
   display: flex;
   align-items: center;
   cursor: pointer;
-
+  width: 100%; 
+  justify-content: center;
 }
 
 .conditionSection span {
   margin: 5px;
-  /* font-size: 30px; */
-  
+  /* font-size: 30px;
+   */
 }
 .conditionSection p {
   font-size: 20px;
   
-}
+} 
 
-
+/* add a 7 day forecast button that will create a pop up with the 7 day forecast on it
+add hourly forecast breakdown map
+add to bottom
+add current time under timezone/overhead condition */

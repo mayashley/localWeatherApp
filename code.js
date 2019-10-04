@@ -1,8 +1,6 @@
-
 window.addEventListener("load", () => {
   let longitude;
   let latitude;
-  
 
   const temperatureDescription = document.querySelector("tempDescription");
 
@@ -14,8 +12,10 @@ window.addEventListener("load", () => {
 
   const theWind = document.querySelector("wind");
 
-  let temperatureCel = document.querySelector('.temperatureC');
-  const temperatureSpan = document.querySelector('.temperatureC span');
+  const thePercipation = document.querySelector("percip");
+
+  let temperatureCel = document.querySelector(".temperatureC");
+  const temperatureSpan = document.querySelector(".temperatureC span");
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -28,58 +28,54 @@ window.addEventListener("load", () => {
 
       fetch(api)
         .then(response => {
+          console.log(response);
           return response.json();
         })
         .then(data => {
           console.log(data);
           const {
             temperature,
+            precipProbability,
             summary,
             windSpeed,
             humidity,
             icon
           } = data.currently;
 
-         
-         
-
-
-
           // set the DOM elements from the API
-
 
           tempDegree.textContent = temperature;
           tempDescription.textContent = summary;
           humid.textContent = humidity;
           wind.textContent = windSpeed;
           timeZone.textContent = data.timezone;
+          precipProbability.textContent = data.precipProbability;
+
           
-          let fahrenheit = (temperature);
+
+          let fahrenheit = temperature;
 
           let celsius = (temperature - 32) * (5 / 9);
-          tempDegree.textContent =Math.floor(fahrenheit);
-        
+          tempDegree.textContent = Math.floor(fahrenheit);
+
           setIcons(icon, document.querySelector(".icons"));
 
           // celsius temp change
-          temperatureCel.addEventListener('click', () =>{
-            console.log('tempSpan', temperatureSpan.textContent);
-          if(temperatureSpan.textContent === "°F"){
+          temperatureCel.addEventListener("click", () => {
+            console.log("tempSpan", temperatureSpan.textContent);
+            if (temperatureSpan.textContent === "°F") {
               temperatureSpan.textContent = "°C";
-            
-              tempDegree.textContent =Math.floor(celsius);
-            
 
-          } else {
+              tempDegree.textContent = Math.floor(celsius);
+            } else {
               temperatureSpan.textContent = "°F";
               tempDegree.textContent = temperature;
-              tempDegree.textContent =Math.floor(fahrenheit);
-          }
-
-          })
+              tempDegree.textContent = Math.floor(fahrenheit);
+            }
+          });
         });
     });
-  } 
+  }
 
   function setIcons(icon, iconID) {
     const skycons = new Skycons({ color: "white" });
@@ -88,4 +84,3 @@ window.addEventListener("load", () => {
     return skycons.set(iconID, Skycons[currentIcon]);
   }
 });
-

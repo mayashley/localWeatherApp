@@ -9,46 +9,53 @@
   </head>
   <body>
     <div class="location" id="location">
-      <h1 class="timeZone" id="timeZone">The Timezone</h1>
+      <h1 class="timeZone" id="timeZone">Timezone</h1>
       <p class="tempDescription" id="tempDescription">
-          Current overhead condition
+        Current overhead condition
       </p>
     </div>
-    
 
-    <!-- <div class="temp-container">
-      <canvas class="icons" width="128" height="128"></canvas> -->
-
+    <div class="row-container">
       <div class="temperatureC " id="temperatureC">
         <div class="degreesSection" id="degreesSection">
-            <canvas class="icons" width="128" height="128"></canvas>
+          <canvas class="icons" width="128" height="128"></canvas>
+
           <p class="tempDegree" id="tempDegree">Temp</p>
           <span>°F</span>
         </div>
-      </div> 
-    </div>
-    
-    <!-- </div> -->
-    <!-- new add ons -->
-
-    <div class="condition-container" id="condition-container">
-      <div class="conditionSection">
-        <p class="wind" id="wind">wind speed goes here</p>
-        <span>mph</span>
       </div>
 
-      <div class="condition-container" id="condition-container">
-        <div class="conditionSection">
-          <p class="humid" id="humid">humidity goes here</p>
-          <span>%</span>
+      <!-- new add ons -->
+      <div class="allCondition">
+        <div class="condition-container" id="condition-container">
+          <div class="conditionSection">
+            <span>Wind Speed:</span>
+            <p class="wind" id="wind">--</p>
+            <span>mph</span>
+          </div>
+
+          <div class="condition-container" id="condition-container">
+            <div class="conditionSection">
+              <span>Humidity:</span>
+              <p class="humid" id="humid">--</p>
+              <span>%</span>
+            </div>
+          </div>
+
+          <div class="condition-container" id="condition-container">
+            <div class="conditionSection">
+              <span>Percipitation:</span>
+              <p class="percip" id="percip">0</p>
+              <span>%</span>
+            </div>
+            <!-- <button class="button" type="button">7 Day Forecast</button> -->
+      </div>
+          </div>
         </div>
-     
 
         <!-- end of new add ons -->
       </div>
     </div>
- 
-  
 
     <script src="skycons.js"></script>
     <script src="code.js"></script>
